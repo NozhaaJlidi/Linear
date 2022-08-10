@@ -1,0 +1,65 @@
+/*solution number one*/
+ALGORITHM distinct
+
+VAR
+i:entier
+n: entier
+x: entier
+s: entier
+t,v: array of integer
+
+    set_declarations
+BEGIN
+/*Remplissage du premier tableau*/
+   repter
+    ecrire("donner la taille n")
+    lire(n)
+   jusqua(n>2)
+
+Pour i de 0 à n faire 
+    ecrire("donner lelement")
+    lire(t[i])
+fin pour
+
+ /* remplissage de 2éme tableau*/
+
+repeter 
+    ecrire ("donner la taille x")
+    lire(x)
+jusqua (x>2)
+
+pour i de 0 à x faire
+    ecrire("donner lelemnt")
+    lire(v[i])
+fin pour
+
+/*calcul*/
+s=0
+pour i de 0 à n faire
+pour i de 0 à x faire
+    ecrire("calcul des destinct")
+    si (t[i]<>v[i]) alors
+        s=t[i]+v[i]
+    fin si
+fin pour
+fin pour
+ecrire("la somme est",s)
+END
+
+
+/* deuxiéme solution*/ 
+
+
+
+ALGORITHM solution2
+VAR
+    /* declaration des variables */
+    i: entier
+    n: entier 
+    htab : HASH_TABLE<entier,entier>;
+
+BEGIN
+ecrire(" donner la taille du tableau")
+   pour i de 0 a n faire 
+    si (htab.lookup())
+END
