@@ -56,10 +56,32 @@ VAR
     /* declaration des variables */
     i: entier
     n: entier 
-    htab : HASH_TABLE<entier,entier>;
+    htab : tab<entier,entier>;
 
 BEGIN
-ecrire(" donner la taille du tableau")
-   pour i de 0 a n faire 
-    si (htab.lookup())
+    ecrire(" donner la taille du tableau")
+    pour i de 0 a n faire 
+        si (htab.lookup(tab[i])) alors
+            htab insert(tab[i],count+1)
+        sinon 
+            htab.insert(tab[i],1)
+        finsi
+    finpour
+
+    pour i de 0 a n faire 
+        si (htab.lookup(tab1[i])) alors
+            htab insert(tab1[i],count+1)
+        sinon 
+            htab.insert(tab1[i],1)
+        finsi
+    finpour
+    tab=htab.get(keys)
+    pour i de 0 a n faire 
+        si (htab.lookup(tab[i]==1))alors
+            S=S+tab1[i]
+        finsi
+    finpour
+
+
+
 END
